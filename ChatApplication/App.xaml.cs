@@ -41,7 +41,7 @@ namespace ChatApplication
         }
         public void SignalR()
         {
-            conn = new HubConnection("http://uwpstories.azurewebsites.net");
+            conn = new HubConnection("http://safechatbackend.azurewebsites.net");
             proxy = conn.CreateHubProxy("ChatHub");
             conn.Start();
             

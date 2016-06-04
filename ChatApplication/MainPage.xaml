@@ -9,13 +9,13 @@
   >
 
     <RelativePanel>
-        <TextBox x:Name="name" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignTopWithPanel="True"></TextBox>
-        <ListView x:Name="lv" ItemsSource="{Binding Messages}" RelativePanel.Above="rp" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="name">
+        <TextBox x:Name="name" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignTopWithPanel="True" PlaceholderText="Username" Background="White" ></TextBox>
+        <ListView x:Name="lv" ItemsSource="{Binding Messages}" RelativePanel.Above="rp" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="name" Background="White">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local:ChatMessage">
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock>
-                        <Run Text="{x:Bind Username}"></Run>
+                        <TextBlock >
+                        <Run Text="{x:Bind Username}" Foreground="Black"  ></Run>
                         <Run Text=": "></Run>
                         <Run Text="{x:Bind Message}"></Run>
                         </TextBlock>
@@ -26,9 +26,9 @@
             </ListView.ItemTemplate>
         </ListView>
         <RelativePanel x:Name="rp" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
-            <TextBox x:Name="text" RelativePanel.AlignLeftWithPanel="True" RelativePanel.LeftOf="send" ></TextBox>
-            <Button x:Name="send" RelativePanel.AlignRightWithPanel="True" Content="Send" Click="send_Click"></Button>
+            <TextBox x:Name="text" RelativePanel.AlignLeftWithPanel="True" RelativePanel.LeftOf="send" PlaceholderText="Message" ></TextBox>
+            <Button x:Name="send" RelativePanel.AlignRightWithPanel="True" Content="Send" Click="send_Click" Background="HotPink" ></Button>
         </RelativePanel>
     </RelativePanel>
-    
+
 </Page>
