@@ -14,8 +14,6 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// The User Control item template is documented at http://go.microsoft.com/fwlink/?LinkId=234236
-
 namespace Blacklight.Views
 {
     public sealed partial class Coupons : Page
@@ -55,8 +53,6 @@ namespace Blacklight.Views
         private async void RetriveCouponMessage_Click(object sender, RoutedEventArgs e)
 
         {
-            //List<Message> allMessages = Messaging.RetrieveMessage();
-
             List<CouponMessage> allMessages = await App.MobileService.GetTable<CouponMessage>().ToListAsync();
 
             string res = "";

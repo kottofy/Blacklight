@@ -51,9 +51,6 @@ namespace Blacklight.Views
 
         private async void Retrive_Click(object sender, RoutedEventArgs e)
         {
-
-            //List<Message> allMessages = Messaging.RetrieveMessage();
-
             List<InspirationMessage> allMessages = await App.MobileService.GetTable<InspirationMessage>().ToListAsync();
 
             string res = "";
