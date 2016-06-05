@@ -23,25 +23,25 @@
                 <StackPanel Orientation="Horizontal">
                     <Button x:Name="HomeButton" FontFamily="Segoe MDL2 Assets" Content="&#xE80F;"
                     Width="50" Height="50" Background="Transparent"  Click="HomeButton_Click"/>
-                    <Button Content="Home" Click="HomeButton_Click"></Button>
+                    <Button Content="Home" Click="HomeButton_Click" Background="Transparent"></Button>
                 </StackPanel>
                 
                 <StackPanel Orientation="Horizontal">
                     <Button x:Name="ProfileButton" FontFamily="Segoe MDL2 Assets" Content="&#xE77B;"
                     Width="50" Height="50" Background="Transparent"  Click="ProfileButton_Click"/>
-                    <Button Content="Profile" Click="ProfileButton_Click"></Button>
+                    <Button Content="Profile" Click="ProfileButton_Click" Background="Transparent"></Button>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal">
                     <Button x:Name="CouponButton" FontFamily="Segoe MDL2 Assets" Content="&#xE719;"
                         Width="50" Height="50" Background="Transparent" Click="CouponButton_Click"/>
-                    <Button Content="Coupon" Click="CouponButton_Click"></Button>
+                    <Button Content="Coupon" Click="CouponButton_Click" Background="Transparent"></Button>
                 </StackPanel>
                 
                 <StackPanel Orientation="Horizontal">
                     <Button x:Name="InspirationButton" FontFamily="Segoe MDL2 Assets" Content="&#xE006;"
                         Width="50" Height="50" Background="Transparent" Click="InspirationButton_Click"/>
-                    <Button Content="Inspiration" Click="InspirationButton_Click"></Button>
+                    <Button Content="Inspiration" Click="InspirationButton_Click" Background="Transparent"></Button>
                 </StackPanel>
                 
             </StackPanel>
@@ -50,7 +50,7 @@
             <RelativePanel>
                 <TextBox x:Name="name" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignTopWithPanel="True" PlaceholderText="Username" BorderBrush="White" ></TextBox>
 
-                <ListView x:Name="lv" ItemsSource="{Binding Messages}" RelativePanel.Above="rp" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="name">
+                <ListView x:Name="lv" ItemsSource="{Binding Messages}" RelativePanel.Above="rp" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="name" >
                     <ListView.ItemTemplate>
                         <DataTemplate x:DataType="local:ChatMessage">
                             <StackPanel Orientation="Horizontal">
