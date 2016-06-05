@@ -18,7 +18,7 @@ using Windows.UI.Xaml.Navigation;
 using Microsoft.AspNet.SignalR.Client;
 using Microsoft.WindowsAzure.MobileServices;
 
-namespace ChatApplication
+namespace BlackLight
 {
     /// <summary>
     /// Provides application-specific behavior to supplement the default Application class.

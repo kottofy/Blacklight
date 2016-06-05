@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ChatApplication
+namespace BlackLight
 {
     public class ChatMessageViewModel
     {
