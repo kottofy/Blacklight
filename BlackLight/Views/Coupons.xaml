@@ -10,6 +10,11 @@
 
     <SplitView x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" 
                CompactPaneLength="50" OpenPaneLength="150">
+        
+        <SplitView.Background>
+            <ImageBrush ImageSource="../Assets/girl.jpg" />
+        </SplitView.Background>
+        
         <SplitView.Pane>
             <StackPanel Background="Turquoise">
                 
@@ -44,10 +49,7 @@
         </SplitView.Pane>
         <SplitView.Content>
             <StackPanel>
-                <StackPanel.Background>
-                    <ImageBrush ImageSource="../Assets/girl.jpg" />
-                </StackPanel.Background>
-                <TextBlock Text="Coupons" Foreground="White" HorizontalAlignment="Center"></TextBlock>
+                <TextBlock Text="Coupons" Foreground="White" HorizontalAlignment="Center" FontSize="40"></TextBlock>
             </StackPanel>
         </SplitView.Content>
     </SplitView>
