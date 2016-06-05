@@ -48,9 +48,19 @@
             </StackPanel>
         </SplitView.Pane>
         <SplitView.Content>
-            <StackPanel>
-                <TextBlock Text="Profile" Foreground="White" HorizontalAlignment="Center" FontSize="40"></TextBlock>
-            </StackPanel>
+            <RelativePanel HorizontalAlignment="Center" >
+
+                <TextBlock x:Name="header" Text="Profile" Foreground="White" HorizontalAlignment="Center" FontSize="40"></TextBlock>
+                <TextBox x:Name="firstname" RelativePanel.Below="header" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" PlaceholderText="First Name" BorderBrush="White" FontSize="20" ></TextBox>
+                <TextBox x:Name="lastname"  RelativePanel.Below="firstname" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" PlaceholderText="Last Name" BorderBrush="White" FontSize="20"  ></TextBox>
+                <TextBox x:Name="email" RelativePanel.Below="lastname"  RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" PlaceholderText="Email" BorderBrush="White" FontSize="20"  ></TextBox>
+                <TextBox x:Name="phone" RelativePanel.Below="email" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True"  PlaceholderText="Phone Number" BorderBrush="White" FontSize="20"  ></TextBox>
+                <Button x:Name="save" RelativePanel.Below="phone" Content="Save" Click="save_Click" Background="Turquoise" BorderBrush="White" HorizontalAlignment="Center" ></Button>
+
+
+            </RelativePanel>
+
+            
     </SplitView.Content>
     </SplitView>
 </Page>

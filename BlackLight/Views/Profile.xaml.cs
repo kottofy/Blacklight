@@ -49,5 +49,10 @@ namespace Blacklight.Views
         {
             this.Frame.Navigate(typeof(Views.Inspiration), "");
         }
+
+        private void save_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
