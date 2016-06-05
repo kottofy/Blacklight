@@ -1,4 +1,5 @@
-﻿using Windows.UI.Xaml;
+﻿using System;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
@@ -16,12 +17,17 @@ namespace Blacklight
         {
             this.InitializeComponent();
             this.DataContext = (Application.Current as App).ChatVM;
-
         }
 
         private void send_Click(object sender, RoutedEventArgs e)
         {
-            (Application.Current as App).Broadcast(new ChatMessage { Username = name.Text, Message = text.Text });
+            var idrandom = DateTime.Now.ToBinary().ToString() + text.Text;
+
+            ChatMessage chatmessage = new ChatMessage { Username = name.Text, Message = text.Text , id = idrandom};
+
+            (Application.Current as App).Broadcast(chatmessage);
+
+            Messaging.InsertChatMessage(chatmessage);
         }
 
         public void HamburgerButton_Click(object sender, RoutedEventArgs e)

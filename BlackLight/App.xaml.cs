@@ -29,6 +29,15 @@ namespace Blacklight
         public ChatMessageViewModel ChatVM { get; set; } = new ChatMessageViewModel();
         public HubConnection conn { get; set; }
         public IHubProxy proxy { get; set; }
+
+
+        public static MobileServiceClient MobileService =
+            new MobileServiceClient(
+                "https://safechat.azurewebsites.net"
+);
+
+        
+
         /// <summary>
         /// Initializes the singleton application object.  This is the first line of authored code
         /// executed, and as such is the logical equivalent of main() or WinMain().

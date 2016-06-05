@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace Blacklight
 {
-    public class ChatMessage
+    public class Message
     {
-        public string Username { get; set; }
-        public string Message { get; set; }
         public string id { get; set; }
+        public string content { get;  set; }
     }
 }

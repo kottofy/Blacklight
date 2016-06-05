@@ -47,7 +47,11 @@
                 <StackPanel.Background>
                     <ImageBrush ImageSource="../Assets/girl.jpg" />
                 </StackPanel.Background>
-                <TextBlock Text="Coupons" Foreground="White" HorizontalAlignment="Center"></TextBlock>
+                <TextBlock Text="Inspiration" Foreground="White" HorizontalAlignment="Center"></TextBlock>
+                <TextBox x:Name="messageTxt" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Enter message" FontSize="33.333"/>
+
+                <Button x:Name="button" Content="Insert" HorizontalAlignment="Center" FontSize="40" Click="InsertData_click" Foreground="White"/>
+                <Button x:Name="button1" Content="Retrieve" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" Click="Retrive_Click" Foreground="White"/>
             </StackPanel>
         </SplitView.Content>
     </SplitView>
