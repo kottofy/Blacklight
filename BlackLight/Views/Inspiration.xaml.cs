@@ -48,26 +48,8 @@ namespace Blacklight.Views
             this.Frame.Navigate(typeof(Views.Inspiration), "");
         }
 
-        private void InsertData_click(object sender, RoutedEventArgs e)
-        {
-            var idrandom = DateTime.Now.ToBinary().ToString() + messageTxt.Text;
-
-            InspirationMessage msg = new InspirationMessage
-            {
-                id = idrandom,
-                content = messageTxt.Text
-            };
-
-            Messaging.InsertMessage(msg);
-
-            var m1 = new MessageDialog("Data Inserted: " + msg.content).ShowAsync();
-
-            messageTxt.Text = "";
-        }
-
 
         private async void Retrive_Click(object sender, RoutedEventArgs e)
-
         {
 
             //List<Message> allMessages = Messaging.RetrieveMessage();
@@ -77,11 +59,8 @@ namespace Blacklight.Views
             string res = "";
 
             foreach (InspirationMessage mess in allMessages)
-
             {
-
                 res += "Message :" + mess.content + "\n\n";
-
             }
 
             var m1 = new MessageDialog(res).ShowAsync();

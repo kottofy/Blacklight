@@ -27,11 +27,6 @@ namespace Blacklight
             await App.MobileService.GetTable<ChatMessage>().InsertAsync(message);
         }
 
-        public static async void InsertCouponMessage(CouponMessage message)
-        {
-            await App.MobileService.GetTable<CouponMessage>().InsertAsync(message);
-        }
-
         
     }
 }

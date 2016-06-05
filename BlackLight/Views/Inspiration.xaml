@@ -48,14 +48,14 @@
             </StackPanel>
         </SplitView.Pane>
         <SplitView.Content>
-            <StackPanel>
+            <RelativePanel HorizontalAlignment="Center">
 
-                <TextBlock Text="Inspiration" Foreground="White" HorizontalAlignment="Center" FontSize="40"></TextBlock>
-                <TextBox x:Name="messageTxt" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" PlaceholderText="Enter message" FontSize="33.333"/>
-                <Button x:Name="button" Content="Insert" HorizontalAlignment="Center" FontSize="40" Click="InsertData_click" Foreground="White" VerticalAlignment="Center"/>
-                <Button x:Name="button1" Content="Retrieve" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" Click="Retrive_Click" Foreground="White"/>
+                <TextBlock Text="Inspiration" Foreground="White" HorizontalAlignment="Center" FontSize="50"></TextBlock>
+                <!--<TextBox x:Name="messageTxt" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" PlaceholderText="Enter message" FontSize="33.333"/>-->
+                <!--<Button x:Name="button" Content="Insert" HorizontalAlignment="Center" FontSize="40" Click="InsertData_click" Foreground="White" VerticalAlignment="Center"/>-->
+                <Button x:Name="button1" Content="Retrieve" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True" FontSize="40" Click="Retrive_Click" Foreground="White"/>
 
-            </StackPanel>
+            </RelativePanel>
         </SplitView.Content>
     </SplitView>
 </Page>
