@@ -12,7 +12,7 @@
                CompactPaneLength="50" OpenPaneLength="150">
         
         <SplitView.Background>
-            <ImageBrush ImageSource="../Assets/girl.jpg" Stretch="None"  />
+            <ImageBrush ImageSource="../Assets/girl.jpg"  Stretch="UniformToFill"  />
         </SplitView.Background>
         
         <SplitView.Pane>
@@ -50,6 +50,10 @@
         <SplitView.Content>
             <StackPanel>
                 <TextBlock Text="Coupons" Foreground="White" HorizontalAlignment="Center" FontSize="40"></TextBlock>
+                <TextBox x:Name="couponTxt" HorizontalAlignment="Center" TextWrapping="Wrap" Text="" VerticalAlignment="Center" PlaceholderText="Enter message" FontSize="33.333"/>
+                <Button x:Name="insertCouponMsg" Content="Insert" HorizontalAlignment="Center" FontSize="40" Click="InsertCouponMessage_Click" Foreground="White" VerticalAlignment="Center"/>
+                <Button x:Name="retrieveCouponMsg" Content="Retrieve" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" Click="RetriveCouponMessage_Click" Foreground="White"/>
+
             </StackPanel>
         </SplitView.Content>
     </SplitView>

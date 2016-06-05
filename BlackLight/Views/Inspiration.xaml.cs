@@ -52,7 +52,7 @@ namespace Blacklight.Views
         {
             var idrandom = DateTime.Now.ToBinary().ToString() + messageTxt.Text;
 
-            Message msg = new Message
+            InspirationMessage msg = new InspirationMessage
             {
                 id = idrandom,
                 content = messageTxt.Text
@@ -72,11 +72,11 @@ namespace Blacklight.Views
 
             //List<Message> allMessages = Messaging.RetrieveMessage();
 
-            List<Message> allMessages = await App.MobileService.GetTable<Message>().ToListAsync();
+            List<InspirationMessage> allMessages = await App.MobileService.GetTable<InspirationMessage>().ToListAsync();
 
             string res = "";
 
-            foreach (Message mess in allMessages)
+            foreach (InspirationMessage mess in allMessages)
 
             {
 

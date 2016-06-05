@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Blacklight
 {
-    public class Message
+    public class InspirationMessage
     {
         public string id { get; set; }
         public string content { get;  set; }

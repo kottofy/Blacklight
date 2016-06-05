@@ -10,21 +10,28 @@ namespace Blacklight
 {
     public class Messaging
     {
-        public static async void InsertMessage(Message message)
+        public static async void InsertMessage(InspirationMessage message)
         {
-            await App.MobileService.GetTable<Message>().InsertAsync(message);
+            await App.MobileService.GetTable<InspirationMessage>().InsertAsync(message);
         }
 
         //TODO: Fix this returning Task thing
-        public static async Task<List<Message>> RetrieveMessage()
-        {
-            List<Message> allMessages = await App.MobileService.GetTable<Message>().ToListAsync();
-            return allMessages;
-        }
+        //public static async Task<List<Message>> RetrieveMessage()
+        //{
+        //    List<Message> allMessages = await App.MobileService.GetTable<Message>().ToListAsync();
+        //    return allMessages;
+        //}
 
         public static async void InsertChatMessage(ChatMessage message)
         {
             await App.MobileService.GetTable<ChatMessage>().InsertAsync(message);
         }
+
+        public static async void InsertCouponMessage(CouponMessage message)
+        {
+            await App.MobileService.GetTable<CouponMessage>().InsertAsync(message);
+        }
+
+        
     }
 }

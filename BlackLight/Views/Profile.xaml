@@ -12,7 +12,7 @@
                CompactPaneLength="50" OpenPaneLength="150">
 
         <SplitView.Background>
-            <ImageBrush ImageSource="../Assets/girl.jpg" Stretch="None" />
+            <ImageBrush ImageSource="../Assets/girl.jpg"  Stretch="UniformToFill"  />
         </SplitView.Background>
         
         <SplitView.Pane>
