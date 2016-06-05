@@ -12,33 +12,42 @@
                CompactPaneLength="50" OpenPaneLength="150">
         <SplitView.Pane>
             <StackPanel Background="Turquoise">
+                
                 <Button x:Name="HamburgerButton" FontFamily="Segoe MDL2 Assets" Content="&#xE700;"
                     Width="50" Height="50" Background="Transparent" Click="HamburgerButton_Click"/>
+                
                 <StackPanel Orientation="Horizontal">
                     <Button x:Name="HomeButton" FontFamily="Segoe MDL2 Assets" Content="&#xE80F;"
                     Width="50" Height="50" Background="Transparent"  Click="HomeButton_Click"/>
                     <Button Content="Home" Click="HomeButton_Click"></Button>
                 </StackPanel>
+                
                 <StackPanel Orientation="Horizontal">
                     <Button x:Name="ProfileButton" FontFamily="Segoe MDL2 Assets" Content="&#xE77B;"
                     Width="50" Height="50" Background="Transparent"  Click="ProfileButton_Click"/>
                     <Button Content="Profile" Click="ProfileButton_Click"></Button>
                 </StackPanel>
+                
                 <StackPanel Orientation="Horizontal">
                     <Button x:Name="CouponButton" FontFamily="Segoe MDL2 Assets" Content="&#xE719;"
                         Width="50" Height="50" Background="Transparent" Click="CouponButton_Click"/>
                     <Button Content="Coupon" Click="CouponButton_Click"></Button>
                 </StackPanel>
+                
                 <StackPanel Orientation="Horizontal">
                     <Button x:Name="InspirationButton" FontFamily="Segoe MDL2 Assets" Content="&#xE006;"
                         Width="50" Height="50" Background="Transparent" Click="InspirationButton_Click"/>
                     <Button Content="Inspiration" Click="InspirationButton_Click"></Button>
                 </StackPanel>
+                
             </StackPanel>
         </SplitView.Pane>
         <SplitView.Content>
-            <StackPanel Background="Black">
-                <TextBlock Text="Profile" Foreground="White"></TextBlock>
+            <StackPanel>
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="../Assets/girl.jpg" />
+                </StackPanel.Background>
+                <TextBlock Text="Profile" Foreground="White" HorizontalAlignment="Center"></TextBlock>
             </StackPanel>
     </SplitView.Content>
     </SplitView>

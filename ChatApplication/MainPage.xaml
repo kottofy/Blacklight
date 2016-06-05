@@ -11,6 +11,9 @@
 
     <SplitView  x:Name="MySplitView" DisplayMode="CompactOverlay"  IsPaneOpen="False" 
                CompactPaneLength="50" OpenPaneLength="150">
+        <SplitView.Background>
+            <ImageBrush ImageSource="../Assets/girl.jpg" />
+        </SplitView.Background>
         <SplitView.Pane>
             <StackPanel Background="Turquoise">
                 
@@ -47,25 +50,25 @@
             <RelativePanel>
                 <TextBox x:Name="name" RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignTopWithPanel="True" PlaceholderText="Username" BorderBrush="White" ></TextBox>
 
-                <ListView x:Name="lv" ItemsSource="{Binding Messages}" RelativePanel.Above="rp" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="name" Background="Black">
+                <ListView x:Name="lv" ItemsSource="{Binding Messages}" RelativePanel.Above="rp" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True" RelativePanel.Below="name">
                     <ListView.ItemTemplate>
                         <DataTemplate x:DataType="local:ChatMessage">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock>
-                        <Run Text="{x:Bind Username}" Foreground="White"></Run>
-                        <Run Text=": "></Run>
-                        <Run Text="{x:Bind Message}" Foreground="White" ></Run>
+                                    <Run Text="{x:Bind Username}" Foreground="White"></Run>
+                                    <Run Text=": "></Run>
+                                    <Run Text="{x:Bind Message}" Foreground="White" ></Run>
                                 </TextBlock>
-
                             </StackPanel>
                         </DataTemplate>
-
                     </ListView.ItemTemplate>
                 </ListView>
+                
                 <RelativePanel x:Name="rp" RelativePanel.AlignBottomWithPanel="True" RelativePanel.AlignLeftWithPanel="True" RelativePanel.AlignRightWithPanel="True">
                     <TextBox x:Name="text" RelativePanel.AlignLeftWithPanel="True" RelativePanel.LeftOf="send" PlaceholderText="Message" BorderBrush="White" ></TextBox>
                     <Button x:Name="send" RelativePanel.AlignRightWithPanel="True" Content="Send" Click="send_Click" Background="Turquoise" BorderBrush="White" Margin="0.333,0,0,0" VerticalAlignment="Bottom" ></Button>
                 </RelativePanel>
+                
             </RelativePanel>
         </SplitView.Content>
     </SplitView>
