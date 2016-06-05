@@ -41,7 +41,7 @@ namespace Blacklight
         }
         public void SignalR()
         {
-            conn = new HubConnection("http://safechatbackend.azurewebsites.net");
+            conn = new HubConnection("http://BlacklightBackend.azurewebsites.net");
             proxy = conn.CreateHubProxy("ChatHub");
             conn.Start();
             
